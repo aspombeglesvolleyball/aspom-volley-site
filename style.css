@@ -843,6 +843,11 @@ nav a.nav-active {
    .club-content-section h2 {
        font-size: 1.6rem;
    }
+
+   .club-stats {
+    grid-template-columns:
+        repeat(2, 1fr);
+   }
 }
 
 
@@ -881,4 +886,71 @@ nav a.nav-active {
    .club-menu {
     grid-template-columns: 1fr;
    }
+
+   .club-stats {
+    grid-template-columns: 1fr;
+   }
+}
+/* =====================================================
+   CHIFFRES CLÉS DU CLUB
+===================================================== */
+
+.club-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+
+.club-stat {
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 22px 15px;
+
+    text-align: center;
+
+    background: #f7f7f7;
+
+    border-radius: 10px;
+
+    border-bottom: 4px solid #e30613;
+}
+
+
+.club-stat-number {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #e30613;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+}
+
+
+.club-stat-place {
+    font-size: 1.6rem;
+}
+
+
+.club-stat-label {
+    color: #333333;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    line-height: 1.4;
 }
