@@ -5,31 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ASPOM Volley Bègles</title>
+    <title>ASPOM Bègles Volley</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=3">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <nav>
         <ul>
-            <li><a href="#accueil">🏠 Accueil</a></li>
-            <li><a href="#club">🏐 Le Club</a></li>
-            <li><a href="#equipes">🏆 Équipes</a></li>
-            <li><a href="#matchs">📅 Matchs & Entraînements</a></li>
-            <li><a href="#actualites">📰 Actualités</a></li>
-            <li><a href="#evenements">🎉 Événements</a></li>
-            <li><a href="#galerie">📸 Galerie</a></li>
-            <li><a href="#inscription">📝 Inscription</a></li>
-            <li><a href="#contact">📞 Contact</a></li>
+
+            <li>
+                <a href="#accueil">
+                    🏠 Accueil
+                </a>
+            </li>
+
+            <li>
+                <a href="./club.html">
+                    🏐 Le Club
+                </a>
+            </li>
+
+            <li>
+                <a href="#equipes">
+                    🏆 Équipes
+                </a>
+            </li>
+
+            <li>
+                <a href="#matchs">
+                    📅 Matchs & Entraînements
+                </a>
+            </li>
+
+            <li>
+                <a href="#actualites">
+                    📰 Actualités
+                </a>
+            </li>
+
+            <li>
+                <a href="#evenements">
+                    🎉 Événements
+                </a>
+            </li>
+
+            <li>
+                <a href="#galerie">
+                    📸 Galerie
+                </a>
+            </li>
+
+            <li>
+                <a href="#inscription">
+                    📝 Inscription
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    📞 Contact
+                </a>
+            </li>
+
         </ul>
     </nav>
 
 
-    <!-- BANNIÈRE -->
+    <!-- =====================================================
+         BANNIÈRE
+    ====================================================== -->
 
     <header class="hero" id="accueil">
 
@@ -38,22 +88,23 @@
             <img
                 class="hero-logo"
                 src="./Logo_ASPOM.png"
-                alt="Logo ASPOM Volley Bègles"
+                alt="Logo ASPOM Bègles Volley"
             >
 
             <p class="hero-label">
-                CLUB DE VOLLEY-BALL À BÈGLES
+                CLUB DE VOLLEY-BALL LOISIR À BÈGLES
             </p>
 
             <h1>
-                ASPOM Volley<br>
-                <span>Bègles</span>
+                ASPOM Bègles<br>
+                <span>Volley</span>
             </h1>
 
             <p class="hero-subtitle">
-                Le volley pour toutes et tous, dans un club
-                convivial, sportif et accessible.
+                Le volley-ball loisir pour toutes et tous,
+                dans un club convivial, sportif et accessible.
             </p>
+
 
             <div class="hero-buttons">
 
@@ -61,7 +112,7 @@
                     Nous rejoindre
                 </a>
 
-                <a href="#club" class="button button-secondary">
+                <a href="./club.html" class="button button-secondary">
                     Découvrir le club
                 </a>
 
@@ -72,16 +123,18 @@
     </header>
 
 
-    <!-- CONTENU -->
+    <!-- =====================================================
+         CONTENU
+    ====================================================== -->
 
     <main>
 
-        <section class="section" id="club">
+        <section class="section">
 
             <div class="section-title">
 
                 <h2>
-                    Bienvenue à l'ASPOM Volley
+                    Bienvenue à l'ASPOM Bègles Volley
                 </h2>
 
                 <div class="title-line"></div>
@@ -91,37 +144,55 @@
 
             <div class="cards">
 
-                <article class="card">
 
-                    <div class="card-icon">🏐</div>
+                <!-- CLUB -->
 
-                    <h3>Le Club</h3>
+                <a href="./club.html" class="card card-link">
+
+                    <div class="card-icon">
+                        🏐
+                    </div>
+
+                    <h3>
+                        Le Club
+                    </h3>
 
                     <p>
-                        Découvrez l'association, le bureau,
-                        l'encadrement et la charte du club.
+                        Découvrez notre club de volley-ball loisir,
+                        l'association, le bureau, l'encadrement
+                        et les valeurs qui nous rassemblent.
                     </p>
 
-                </article>
+                </a>
 
+
+                <!-- ÉQUIPES -->
 
                 <article class="card" id="equipes">
 
-                    <div class="card-icon">🏆</div>
+                    <div class="card-icon">
+                        🏆
+                    </div>
 
-                    <h3>Équipes</h3>
+                    <h3>
+                        Équipes
+                    </h3>
 
                     <p>
-                        La présentation des équipes sera ajoutée
-                        prochainement.
+                        Découvrez prochainement nos trois équipes
+                        de volley-ball loisir.
                     </p>
 
                 </article>
 
 
+                <!-- MATCHS -->
+
                 <article class="card" id="matchs">
 
-                    <div class="card-icon">📅</div>
+                    <div class="card-icon">
+                        📅
+                    </div>
 
                     <h3>
                         Matchs &<br>
@@ -130,77 +201,113 @@
 
                     <p>
                         Retrouvez prochainement les calendriers,
-                        les horaires et les lieux d'entraînement.
+                        les horaires des entraînements et
+                        les rencontres de nos équipes.
                     </p>
 
                 </article>
 
+
+                <!-- ACTUALITÉS -->
 
                 <article class="card" id="actualites">
 
-                    <div class="card-icon">📰</div>
+                    <div class="card-icon">
+                        📰
+                    </div>
 
-                    <h3>Actualités</h3>
+                    <h3>
+                        Actualités
+                    </h3>
 
                     <p>
-                        Suivez les dernières informations et les
-                        résultats de l'ASPOM Volley.
+                        Suivez les dernières informations,
+                        les rencontres et la vie
+                        de l'ASPOM Bègles Volley.
                     </p>
 
                 </article>
 
+
+                <!-- ÉVÉNEMENTS -->
 
                 <article class="card" id="evenements">
 
-                    <div class="card-icon">🎉</div>
+                    <div class="card-icon">
+                        🎉
+                    </div>
 
-                    <h3>Événements</h3>
+                    <h3>
+                        Événements
+                    </h3>
 
                     <p>
-                        Découvrez les tournois, rencontres et
-                        événements organisés par le club.
+                        Découvrez les tournois, rencontres amicales
+                        et événements organisés par le club.
                     </p>
 
                 </article>
 
 
+                <!-- GALERIE -->
+
                 <article class="card" id="galerie">
 
-                    <div class="card-icon">📷</div>
+                    <div class="card-icon">
+                        📷
+                    </div>
 
-                    <h3>Galerie</h3>
+                    <h3>
+                        Galerie
+                    </h3>
 
                     <p>
-                        Les photos des équipes et de la vie du club
+                        Retrouvez prochainement les photos
+                        de nos équipes, de nos rencontres
+                        et de la vie du club.
+                    </p>
+
+                </article>
+
+
+                <!-- INSCRIPTION -->
+
+                <article class="card" id="inscription">
+
+                    <div class="card-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        Inscription
+                    </h3>
+
+                    <p>
+                        Vous souhaitez pratiquer le volley-ball
+                        dans une ambiance loisir et conviviale ?
+                        Les informations d'inscription
                         seront bientôt disponibles.
                     </p>
 
                 </article>
 
 
-                <article class="card" id="inscription">
-
-                    <div class="card-icon">📝</div>
-
-                    <h3>Inscription</h3>
-
-                    <p>
-                        Les informations et le formulaire
-                        d'inscription seront bientôt disponibles.
-                    </p>
-
-                </article>
-
+                <!-- CONTACT -->
 
                 <article class="card" id="contact">
 
-                    <div class="card-icon">📞</div>
+                    <div class="card-icon">
+                        📞
+                    </div>
 
-                    <h3>Contact</h3>
+                    <h3>
+                        Contact
+                    </h3>
 
                     <p>
-                        Les coordonnées du club et des gymnases
-                        seront ajoutées prochainement.
+                        Retrouvez prochainement les coordonnées
+                        du club ainsi que les informations
+                        concernant le gymnase du Dorat.
                     </p>
 
                 </article>
@@ -212,12 +319,14 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <p>
-            ASPOM Volley Bègles © 2026
+            ASPOM Bègles Volley © 2026
         </p>
 
     </footer>
