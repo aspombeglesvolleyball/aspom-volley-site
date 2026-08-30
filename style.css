@@ -831,6 +831,141 @@ nav a.nav-active {
 }
 
 /* =====================================================
+   PAGE MATCHS & ENTRAÎNEMENTS
+===================================================== */
+
+.schedule-block {
+    max-width: 1050px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin: 0 auto 60px;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #e30613;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.schedule-icon {
+    flex-shrink: 0;
+
+    font-size: 3rem;
+}
+
+
+.schedule-content {
+    width: 100%;
+}
+
+
+.schedule-content h2 {
+    margin-bottom: 15px;
+
+    font-size: 1.8rem;
+}
+
+
+.schedule-content p {
+    margin-bottom: 12px;
+
+    color: #444444;
+
+    line-height: 1.6;
+}
+
+
+.schedule-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.schedule-details div {
+    padding: 18px;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+
+.schedule-details strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+.schedule-details span {
+    color: #444444;
+
+    font-size: 0.95rem;
+}
+
+
+.matches-section {
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+.matches-empty {
+    padding: 45px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-bottom: 4px solid #e30613;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.matches-empty-icon {
+    margin-bottom: 15px;
+
+    font-size: 2.5rem;
+}
+
+
+.matches-empty h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.4rem;
+}
+
+
+.matches-empty p {
+    color: #444444;
+
+    line-height: 1.6;
+}
+
+/* =====================================================
    TABLETTES
 ===================================================== */
 
