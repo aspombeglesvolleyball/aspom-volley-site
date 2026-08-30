@@ -108,60 +108,28 @@ nav a:hover {
 
     background:
         linear-gradient(
-            135deg,
-            #320609 0%,
-            #680a11 35%,
-            #a80d17 68%,
-            #e30613 100%
-        );
+            rgba(0, 0, 0, 0.55),
+            rgba(120, 0, 0, 0.35)
+        ),
+        url("./fond-banniere-volley.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 /* Effet lumineux rouge */
 
 .hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 800px;
-    height: 800px;
-
-    right: -300px;
-    top: -150px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.08) 0%,
-            rgba(255, 255, 255, 0.02) 35%,
-            transparent 70%
-        );
-
-    pointer-events: none;
+    display: none;
 }
 
 
 /* Effet sombre diagonal */
 
 .hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 130%;
-    height: 280px;
-
-    left: -15%;
-    bottom: -190px;
-
-    transform: rotate(-7deg);
-
-    background: rgba(0, 0, 0, 0.20);
-
-    pointer-events: none;
+    display: none;
 }
 
 
@@ -235,7 +203,7 @@ nav a:hover {
     letter-spacing: -2px;
 
     text-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.25);
+        0 6px 20px rgba(0, 0, 0, 0.55);
 }
 
 .hero h1 span {
@@ -251,8 +219,10 @@ nav a:hover {
     font-size: 1.2rem;
 
     line-height: 1.5;
-}
 
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.45);
+}
 
 /* =====================================================
    BOUTONS
