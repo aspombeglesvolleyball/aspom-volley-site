@@ -28,28 +28,39 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            padding: 0 20px;
             background: #111111;
-            padding: 15px 20px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
         }
-
+        
         nav ul {
+            min-height: 64px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 6px;
             list-style: none;
         }
-
+        
         nav a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 10px;
+            border-radius: 8px;
             color: #ffffff;
             text-decoration: none;
+            font-size: 0.88rem;
             font-weight: bold;
-            transition: color 0.2s;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
         }
-
-        nav a:hover {
-            color: #e30613;
+        
+        nav a:hover,
+        nav a:focus-visible {
+            background: #e30613;
+            color: #ffffff;
         }
 
         .hero {
@@ -169,36 +180,18 @@
 
 <body>
 
-    <nav>
-        <ul>
-            <li>
-                #accueil🏠 Accueil</a>
-            </li>
-            <li>
-                #club🏐 Le Club</a>
-            </li>
-            <li>
-                #equipes🏆 Équipes</a>
-            </li>
-            <li>
-                #matchs📅 Matchs & Entraînements</a>
-            </li>
-            <li>
-                #actualites📰 Actualités</a>
-            </li>
-            <li>
-                #evenements🎉 Événements</a>
-            </li>
-            <li>
-                #galerie📸 Galerie</a>
-            </li>
-            <li>
-                #inscription📝 Inscription</a>
-            </li>
-            <li>
-                #contact📞 Contact</a>
-            </li>
-        </ul>
+    <nav aria-label="Navigation principale">
+    <ul>
+        <li>#accueil🏠 <span>Accueil</span></a></li>
+        <li>#club🏐 <span>Le Club</span></a></li>
+        <li><aquipes🏆 <span>Équipes</span></a></li>
+        <li>#matchs📅 <span>Matchs &amp; Entraînements</span></a></li>
+        <li>#actualites📰 <span>Actualités</span></a></li>
+        <li>#evenements🎉 <span>Événements</span></a></li>
+        <li>#galerie📸 <span>Galerie</span></a></li>
+        <li>#inscription📝 <span>Inscription</span></a></li>
+        <li>#contact📞 <span>Contact</span></a></li>
+    </ul>
     </nav>
 
     <header class="hero" id="accueil">
