@@ -954,3 +954,12 @@ nav a.nav-active {
 
     line-height: 1.4;
 }
+
+.card-link {
+    color: #111111;
+    text-decoration: none;
+}
+
+.card-link:visited {
+    color: #111111;
+}
