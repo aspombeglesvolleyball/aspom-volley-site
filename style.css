@@ -1447,6 +1447,126 @@ nav a.nav-active {
 }
 
 /* =====================================================
+   PAGE CONTACT
+===================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 50px;
+}
+
+
+.contact-card {
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-bottom: 4px solid #e30613;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+.contact-icon {
+    margin-bottom: 15px;
+
+    font-size: 2.5rem;
+}
+
+
+.contact-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 1.3rem;
+}
+
+
+.contact-card p {
+    color: #444444;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+.contact-info {
+    margin-top: 15px;
+
+    color: #e30613 !important;
+
+    font-weight: 800;
+
+    font-size: 1rem !important;
+}
+
+
+/* BLOC BIENVENUE */
+
+.contact-welcome {
+    max-width: 1050px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #e30613;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.contact-welcome-icon {
+    flex-shrink: 0;
+
+    font-size: 3rem;
+}
+
+
+.contact-welcome h2 {
+    margin-bottom: 15px;
+
+    font-size: 1.8rem;
+}
+
+
+.contact-welcome p {
+    margin-bottom: 10px;
+
+    color: #444444;
+
+    line-height: 1.6;
+}
+
+/* =====================================================
    TABLETTES
 ===================================================== */
 
@@ -1688,6 +1808,18 @@ nav a.nav-active {
    
    .join-training-details {
        grid-template-columns: 1fr;
+   }
+   .contact-grid {
+       grid-template-columns: 1fr;
+   }
+   
+   
+   .contact-welcome {
+       flex-direction: column;
+   
+       padding: 30px 20px;
+   
+       text-align: center;
    }
 }
 
