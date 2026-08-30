@@ -966,6 +966,98 @@ nav a.nav-active {
 }
 
 /* =====================================================
+   PAGE ACTUALITÉS
+===================================================== */
+
+.news-card {
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns:
+        320px 1fr;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-bottom: 4px solid #e30613;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+.news-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 380px;
+
+    padding: 35px;
+
+    background: #111111;
+}
+
+
+.news-image img {
+    width: 100%;
+    max-width: 230px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+.news-content {
+    padding: 40px;
+}
+
+
+.news-meta {
+    margin-bottom: 10px;
+
+    color: #e30613;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.news-content h2 {
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+}
+
+
+.news-content p {
+    margin-bottom: 15px;
+
+    color: #444444;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+.news-ending {
+    margin-top: 25px;
+}
+
+/* =====================================================
    TABLETTES
 ===================================================== */
 
@@ -1143,6 +1235,29 @@ nav a.nav-active {
        padding: 30px 20px;
    
        text-align: center;
+   }
+   .news-card {
+       grid-template-columns: 1fr;
+   }
+   
+   
+   .news-image {
+       min-height: 250px;
+   }
+   
+   
+   .news-image img {
+       max-width: 170px;
+   }
+   
+   
+   .news-content {
+       padding: 30px 20px;
+   }
+   
+   
+   .news-content h2 {
+       font-size: 1.6rem;
    }
 }
 
