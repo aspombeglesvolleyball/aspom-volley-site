@@ -613,3 +613,369 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* =====================================================
+   SECTION LE CLUB
+===================================================== */
+
+.club-section {
+    background: #f5f5f5;
+    padding: 70px 30px;
+}
+
+.club-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PRÉSENTATION
+========================= */
+
+.club-introduction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    margin-bottom: 80px;
+}
+
+.club-small-title {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #e30613;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.club-text h3 {
+    margin-bottom: 22px;
+
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.club-text h3 span {
+    color: #e30613;
+}
+
+.club-text p {
+    margin-bottom: 16px;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    color: #333333;
+}
+
+
+/* =========================
+   EMPLACEMENT PHOTO
+========================= */
+
+.club-photo-placeholder {
+    min-height: 380px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #2a080b
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photo-icon {
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+}
+
+.club-photo-placeholder p {
+    margin-bottom: 6px;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.club-photo-placeholder span {
+    color: #cccccc;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   VALEURS
+========================= */
+
+.values {
+    margin-bottom: 80px;
+}
+
+.values-title {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.values-title h3 {
+    margin-bottom: 8px;
+
+    font-size: 2rem;
+}
+
+.values-title p {
+    color: #555555;
+
+    font-size: 1rem;
+}
+
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.value-card {
+    padding: 30px 22px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border-bottom: 4px solid #e30613;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.value-icon {
+    margin-bottom: 15px;
+
+    font-size: 2.5rem;
+}
+
+.value-card h4 {
+    margin-bottom: 12px;
+
+    font-size: 1.15rem;
+}
+
+.value-card p {
+    color: #444444;
+
+    font-size: 0.95rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   BUREAU
+========================= */
+
+.bureau {
+    margin-bottom: 70px;
+}
+
+.bureau-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.bureau-card {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bureau-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #111111;
+
+    font-size: 2rem;
+}
+
+.bureau-card h4 {
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+}
+
+.bureau-card p {
+    color: #e30613;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   NOUS REJOINDRE
+========================= */
+
+.club-join {
+    padding: 50px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #8e0c15,
+            #e30613
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.club-join h3 {
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+}
+
+.club-join p {
+    margin-bottom: 25px;
+
+    font-size: 1.05rem;
+}
+
+.club-join .button {
+    background: #ffffff;
+
+    color: #111111;
+}
+
+.club-join .button:hover {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .club-introduction {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .values-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .bureau-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .club-section {
+        padding: 50px 15px;
+    }
+
+    .club-text h3 {
+        font-size: 2rem;
+    }
+
+    .club-photo-placeholder {
+        min-height: 280px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bureau-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .club-join {
+        padding: 40px 20px;
+    }
+
+    .club-join h3 {
+        font-size: 1.6rem;
+    }
+
+}
