@@ -1454,7 +1454,7 @@ nav a.nav-active {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
     gap: 22px;
 
@@ -1508,14 +1508,17 @@ nav a.nav-active {
 }
 
 
-.contact-info {
-    margin-top: 15px;
-
-    color: #e30613 !important;
-
+.contact-info a {
+    color: #e30613;
+   
+    text-decoration: none;
+   
     font-weight: 800;
+}
 
-    font-size: 1rem !important;
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 
