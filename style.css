@@ -449,6 +449,237 @@ footer {
     font-size: 0.9rem;
 }
 
+/* =====================================================
+   PAGE CLUB - BANDEAU
+===================================================== */
+
+.page-hero {
+    min-height: 390px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #320609 0%,
+            #680a11 35%,
+            #a80d17 68%,
+            #e30613 100%
+        );
+}
+
+
+.page-hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+.page-hero-logo {
+    width: 130px;
+    height: auto;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 6px 10px rgba(0, 0, 0, 0.30)
+        );
+}
+
+
+.page-hero-label {
+    margin-bottom: 10px;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.page-hero h1 {
+    margin-bottom: 15px;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+.page-hero-subtitle {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   MENU PAGE CLUB
+===================================================== */
+
+.club-menu {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 60px;
+}
+
+
+.club-menu-card {
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #111111;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    border-bottom: 4px solid #e30613;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.club-menu-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+
+.club-menu-card:visited {
+    color: #111111;
+}
+
+
+.club-menu-icon {
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+}
+
+
+.club-menu-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.15rem;
+}
+
+
+.club-menu-card p {
+    color: #444444;
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CONTENU PAGE CLUB
+===================================================== */
+
+.club-content-section {
+    max-width: 1050px;
+
+    margin: 0 auto 35px;
+
+    padding: 45px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+
+    scroll-margin-top: 80px;
+}
+
+
+.club-content-text {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.club-small-title {
+    margin-bottom: 8px;
+
+    color: #e30613;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.club-content-section h2 {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+
+.club-content-section p {
+    margin-bottom: 14px;
+
+    color: #444444;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ONGLET ACTIF NAVIGATION
+===================================================== */
+
+nav a.nav-active {
+    background: #e30613;
+}
 
 /* =====================================================
    TABLETTES
@@ -470,6 +701,11 @@ footer {
         grid-template-columns:
             repeat(2, 1fr);
     }
+   
+   .club-menu {
+    grid-template-columns:
+        repeat(2, 1fr);
+   }
 }
 
 
@@ -578,6 +814,35 @@ footer {
     .card p {
         font-size: 0.85rem;
     }
+
+   .page-hero {
+    min-height: 330px;
+   }
+   
+   .page-hero-logo {
+       width: 100px;
+   }
+   
+   .club-menu {
+       grid-template-columns:
+           repeat(2, 1fr);
+   
+       gap: 12px;
+   }
+   
+   .club-menu-card {
+       min-height: 200px;
+   
+       padding: 20px 12px;
+   }
+   
+   .club-content-section {
+       padding: 30px 20px;
+   }
+   
+   .club-content-section h2 {
+       font-size: 1.6rem;
+   }
 }
 
 
@@ -612,4 +877,8 @@ footer {
     .cards {
         grid-template-columns: 1fr;
     }
+
+   .club-menu {
+    grid-template-columns: 1fr;
+   }
 }
