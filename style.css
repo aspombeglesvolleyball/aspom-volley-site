@@ -2248,6 +2248,12 @@ nav a.nav-active {
    .values-grid {
        grid-template-columns: 1fr;
    }
+
+   @media (max-width: 420px) {
+
+    .club-stats {
+        grid-template-columns: 1fr;
+    }
 }
 /* =====================================================
    CHIFFRES CLÉS DU CLUB
@@ -2320,4 +2326,74 @@ nav a.nav-active {
 
 .card-link:visited {
     color: #111111;
+}
+
+/* =====================================================
+   CORRECTIONS MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* -------- PAGE CLUB : CHIFFRES CLÉS -------- */
+
+    .club-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .club-stat {
+        min-width: 0;
+
+        padding: 20px 10px;
+    }
+
+    .club-stat-number {
+        font-size: 1.7rem;
+    }
+
+    .club-stat-place {
+        font-size: 1.3rem;
+    }
+
+    .club-stat-label {
+        font-size: 0.85rem;
+    }
+
+
+    /* -------- MATCHS & ENTRAÎNEMENTS -------- */
+
+    .schedule-block {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+        padding: 25px 18px;
+
+        text-align: left;
+    }
+
+    .schedule-icon {
+        align-self: center;
+    }
+
+    .schedule-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .schedule-details {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .schedule-details div {
+        width: 100%;
+
+        padding: 15px;
+    }
 }
