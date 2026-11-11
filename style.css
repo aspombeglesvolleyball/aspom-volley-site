@@ -3289,5 +3289,39 @@ nav a.nav-active {
 
     font-size: 0.55rem;
 
+   /* =====================================================
+   MATCH JOUÉ
+===================================================== */
+
+.calendar-day.match-played {
+    background: #2e9d50 !important;
+
+    color: #ffffff !important;
+}
+
+
+.calendar-day.match-played
+.calendar-match-name {
+    color: #ffffff !important;
+}
+
+
+.calendar-day.match-played
+.calendar-match-status {
+    background: #176b32;
+
+    color: #ffffff;
+}
+
+
+/* DOM / EXT SUR MATCH JOUÉ */
+
+.calendar-day.match-played
+.calendar-match-location {
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #176b32;
+}
+
     font-weight: 900;
 }
