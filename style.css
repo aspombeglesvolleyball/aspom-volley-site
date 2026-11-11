@@ -3175,3 +3175,59 @@ nav a.nav-active {
     }
 
 }
+
+/* =====================================================
+   STATUT DES MATCHS
+===================================================== */
+
+/* DATE FFVB INDICATIVE */
+
+.calendar-day.match-provisional {
+    background: #f2a900;
+
+    color: #111111;
+}
+
+
+.calendar-day.match-provisional
+.calendar-match-name,
+
+.calendar-day.match-provisional
+.calendar-match-status {
+
+    color: #111111;
+}
+
+
+/* DATE CONFIRMÉE */
+
+.calendar-day.match-confirmed {
+    background: #e30613;
+
+    color: #ffffff;
+}
+
+
+.calendar-day.match-confirmed
+.calendar-match-name,
+
+.calendar-day.match-confirmed
+.calendar-match-status {
+
+    color: #ffffff;
+}
+
+
+/* STATUT */
+
+.calendar-match-status {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
