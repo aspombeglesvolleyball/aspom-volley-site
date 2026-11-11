@@ -2704,3 +2704,19 @@ nav a.nav-active {
     }
 
 }
+
+/* =====================================================
+      CORRECTION LOGO PARTENAIRE
+   ===================================================== */
+   
+   .partner-card .partner-logo {
+       display: block !important;
+   
+       width: 130px !important;
+       max-width: 130px !important;
+       height: auto !important;
+   
+       margin: 0 auto 18px auto !important;
+   
+       object-fit: contain;
+   }
