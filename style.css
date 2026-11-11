@@ -3325,3 +3325,30 @@ nav a.nav-active {
 
     font-weight: 900;
 }
+
+/* =====================================================
+   PRIORITÉ MATCH JOUÉ
+===================================================== */
+
+.calendar-day.match-home.match-played,
+.calendar-day.match-away.match-played,
+.calendar-day.match-played {
+    background: #2e9d50 !important;
+    color: #ffffff !important;
+    border-left-color: #176b32 !important;
+}
+
+.calendar-day.match-played .calendar-day-number,
+.calendar-day.match-played .calendar-match-name {
+    color: #ffffff !important;
+}
+
+.calendar-day.match-played .calendar-match-location {
+    background: #176b32 !important;
+    color: #ffffff !important;
+}
+
+.calendar-day.match-played .calendar-match-status {
+    background: #176b32 !important;
+    color: #ffffff !important;
+}
