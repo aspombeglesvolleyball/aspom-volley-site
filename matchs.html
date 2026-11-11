@@ -833,7 +833,20 @@ function renderCalendar(team) {
                     Boolean(
                         match.confirmedDate
                     );
-
+                
+                    if (match.home) {
+                    
+                        dayElement.classList.add(
+                            "match-home"
+                        );
+                    
+                    } else {
+                    
+                        dayElement.classList.add(
+                            "match-away"
+                        );
+                    
+                    }
 
                 if (isConfirmed) {
 
@@ -880,6 +893,24 @@ function renderCalendar(team) {
                     opponent
                 );
 
+                /* DOMICILE / EXTÉRIEUR */
+
+                const locationStatus =
+                    document.createElement(
+                        "span"
+                    );
+                
+                locationStatus.className =
+                    "calendar-match-location";
+                
+                locationStatus.textContent =
+                    match.home
+                        ? "DOM"
+                        : "EXT";
+                
+                dayElement.appendChild(
+                    locationStatus
+                );
 
                 /* STATUT */
 
