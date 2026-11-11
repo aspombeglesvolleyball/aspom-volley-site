@@ -2029,9 +2029,10 @@ nav a.nav-active {
    
    .partner-card {
        width: 100%;
+      
        max-width: 380px;
    
-       padding: 30px 25px;
+       padding: 25px 25px;
    
        background: #ffffff;
    
@@ -2089,9 +2090,12 @@ nav a.nav-active {
    }
 
    .partner-logo {
-       width: 180px;
-       max-width: 80%;
+       width: 150px;
+      
+       max-width: 75%;
+      
        height: auto;
+      
        margin-bottom: 18px;
    }
 
