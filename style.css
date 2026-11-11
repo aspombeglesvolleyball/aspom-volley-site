@@ -2976,225 +2976,179 @@ nav a.nav-active {
    }
 
 /* =====================================================
-   CALENDRIER DES MATCHS
+   CALENDRIER SAISON
 ===================================================== */
 
-.matches-calendar {
-    max-width: 1200px;
+.season-calendar {
+    max-width: 1400px;
     margin: 50px auto;
     padding: 40px 20px;
 }
 
-.matches-calendar-header {
+.calendar-header {
     margin-bottom: 35px;
     text-align: center;
 }
 
-.matches-calendar-header h2 {
-    margin-bottom: 12px;
+.calendar-header h2 {
+    margin-bottom: 10px;
     font-size: 2rem;
 }
 
-.matches-calendar-header > p:last-child {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #555555;
-    line-height: 1.6;
+.calendar-warning {
+    max-width: 750px;
+    margin: 15px auto 0;
+    padding: 12px 18px;
+
+    background: #fff4d6;
+
+    border-radius: 8px;
+
+    color: #6b5200;
+
+    font-size: 0.9rem;
 }
 
-.matches-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+
+/* ONGLETS */
+
+.calendar-tabs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 35px;
 }
 
-.match-card {
-    display: flex;
-    align-items: center;
+.calendar-tab {
+    min-height: 52px;
+
+    padding: 10px 8px;
+
+    border: 2px solid #e30613;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.calendar-tab.active {
+    background: #e30613;
+    color: #ffffff;
+}
+
+
+/* NOM ÉQUIPE */
+
+.calendar-team-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.calendar-team-title h3 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.calendar-team-title span {
+    color: #777777;
+}
+
+
+/* MOIS */
+
+.season-calendar-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 25px;
+}
 
-    padding: 22px 25px;
+.calendar-month {
+    padding: 22px;
 
     background: #ffffff;
 
     border-radius: 12px;
-    border-left: 5px solid #e30613;
 
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.09);
 }
 
-.match-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
-}
+.calendar-month-title {
+    margin-bottom: 18px;
 
-
-/* DATE */
-
-.match-date {
-    min-width: 85px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 12px 10px;
-
-    background: #111111;
-    color: #ffffff;
-
-    border-radius: 10px;
-}
-
-.match-day {
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1;
-}
-
-.match-month {
-    margin-top: 5px;
-
-    color: #ffffff;
-
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-
-/* INFORMATIONS */
-
-.match-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.match-team {
-    display: inline-block;
-
-    margin-bottom: 7px;
-
-    color: #e30613;
-
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 900;
 
-    letter-spacing: 1px;
+    text-align: center;
     text-transform: uppercase;
 }
 
-.match-info h3 {
-    margin: 0 0 12px 0;
-    font-size: 1.25rem;
+
+/* JOURS SEMAINE */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-bottom: 5px;
 }
 
-.match-versus {
-    margin: 0 8px;
+.calendar-weekdays span {
+    padding: 7px 2px;
 
-    color: #e30613;
+    color: #777777;
 
-    font-size: 0.9rem;
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* CASES JOUR */
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 4px;
+}
+
+.calendar-day {
+    min-height: 65px;
+
+    padding: 7px 5px;
+
+    background: #f6f6f6;
+
+    border-radius: 6px;
+
+    font-size: 0.8rem;
+}
+
+.calendar-day.empty {
+    background: transparent;
+}
+
+.calendar-day-number {
     font-weight: bold;
 }
 
-.match-details {
-    display: flex;
-    flex-wrap: wrap;
 
-    gap: 10px 25px;
-
-    color: #555555;
-
-    font-size: 0.9rem;
-}
-
-
-/* REPÈRES DES ÉQUIPES */
-
-.team-begles-1 {
-    border-left-color: #e30613;
-}
-
-.team-begles-2 {
-    border-left-color: #111111;
-}
-
-.team-begles-3 {
-    border-left-color: #777777;
-}
-
-.team-open {
-    border-left-color: #d28b00;
-}
-
-.team-heitz {
-    border-left-color: #b7318c;
-}
-
-.team-aicoberry {
-    border-left-color: #245ea8;
-}
-
-
-/* =====================================================
-   CALENDRIER MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .match-card {
-        align-items: flex-start;
-        gap: 15px;
-        padding: 18px 15px;
-    }
-
-    .match-date {
-        min-width: 68px;
-        padding: 10px 7px;
-    }
-
-    .match-day {
-        font-size: 1.6rem;
-    }
-
-    .match-info h3 {
-        font-size: 1.05rem;
-    }
-
-    .match-details {
-        flex-direction: column;
-        gap: 7px;
-    }
-
-}
-
-/* =====================================================
-   STATUT DES MATCHS
-===================================================== */
-
-/* DATE FFVB INDICATIVE */
+/* DATE INDICATIVE */
 
 .calendar-day.match-provisional {
     background: #f2a900;
-
-    color: #111111;
-}
-
-
-.calendar-day.match-provisional
-.calendar-match-name,
-
-.calendar-day.match-provisional
-.calendar-match-status {
-
     color: #111111;
 }
 
@@ -3203,31 +3157,99 @@ nav a.nav-active {
 
 .calendar-day.match-confirmed {
     background: #e30613;
-
     color: #ffffff;
 }
 
 
-.calendar-day.match-confirmed
-.calendar-match-name,
+/* MATCH */
 
-.calendar-day.match-confirmed
-.calendar-match-status {
+.calendar-match-name {
+    display: block;
 
-    color: #ffffff;
+    margin-top: 5px;
+
+    font-size: 0.65rem;
+    font-weight: bold;
+
+    line-height: 1.2;
 }
-
-
-/* STATUT */
 
 .calendar-match-status {
     display: block;
 
     margin-top: 4px;
 
-    font-size: 0.58rem;
-
+    font-size: 0.55rem;
     font-weight: 900;
 
     text-transform: uppercase;
+}
+
+
+/* LÉGENDE */
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 4px;
+}
+
+.legend-provisional {
+    background: #f2a900;
+}
+
+.legend-confirmed {
+    background: #e30613;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .calendar-tabs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .calendar-tabs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .season-calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-month {
+        padding: 15px 10px;
+    }
+
+    .calendar-day {
+        min-height: 55px;
+        padding: 5px 3px;
+    }
+
 }
