@@ -539,7 +539,593 @@
         </div>
     
     </footer>
-    
-</body>
 
+    <script>
+    
+    /* =====================================================
+       NOMS DES ÉQUIPES
+    ===================================================== */
+    
+    const teamNames = {
+        begles1: "ASPOM Bègles 1",
+        begles2: "ASPOM Bègles 2",
+        begles3: "ASPOM Bègles 3",
+        open: "OPEN",
+        heitz: "Heitz - Coupe féminine",
+        aicoberry: "Aicoberry - Coupe masculine"
+    };
+    
+    
+    /* =====================================================
+       MATCHS
+    ===================================================== */
+    
+    const matches = {
+    
+        begles1: [
+    
+            {
+                opponent: "Lesparre Volleyball SAM",
+                provisionalDate: "2026-11-02",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "Le Haillan 1",
+                provisionalDate: "2026-11-12",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "Libourne 2",
+                provisionalDate: "2026-11-17",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "Blanquefort 2",
+                provisionalDate: "2026-12-03",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "Blanquefort 3",
+                provisionalDate: "2026-12-07",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "La Cocarde 1",
+                provisionalDate: "2027-01-07",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "À préciser",
+                provisionalDate: "2027-01-18",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "St Médard d'Eyrans",
+                provisionalDate: "2027-01-25",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "Pellegrue 1",
+                provisionalDate: "2027-02-04",
+                confirmedDate: null,
+                home: true
+            }
+    
+        ],
+    
+    
+        begles2: [
+    
+            {
+                opponent: "AVIA 1",
+                provisionalDate: "2026-11-02",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "Martignas 1",
+                provisionalDate: "2026-11-11",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "Eysines 3",
+                provisionalDate: "2026-11-16",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "Talence 2",
+                provisionalDate: "2026-12-04",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "Gradignan 2",
+                provisionalDate: "2026-12-07",
+                confirmedDate: null,
+                home: true
+            },
+    
+            {
+                opponent: "La Cocarde 2",
+                provisionalDate: "2027-01-06",
+                confirmedDate: null,
+                home: false
+            },
+    
+            {
+                opponent: "USM 4",
+                provisionalDate: "2027-01-18",
+                confirmedDate: null,
+                home: true
+            }
+    
+        ],
+    
+    
+        begles3: [
+    
+        ],
+    
+        open: [
+    
+        ],
+    
+        heitz: [
+    
+        ],
+    
+        aicoberry: [
+    
+        ]
+    
+    };
+
+/* =====================================================
+   SAISON 2026-2027
+===================================================== */
+
+const seasonMonths = [
+
+    { year: 2026, month: 8, name: "Septembre 2026" },
+    { year: 2026, month: 9, name: "Octobre 2026" },
+    { year: 2026, month: 10, name: "Novembre 2026" },
+    { year: 2026, month: 11, name: "Décembre 2026" },
+
+    { year: 2027, month: 0, name: "Janvier 2027" },
+    { year: 2027, month: 1, name: "Février 2027" },
+    { year: 2027, month: 2, name: "Mars 2027" },
+    { year: 2027, month: 3, name: "Avril 2027" },
+    { year: 2027, month: 4, name: "Mai 2027" },
+    { year: 2027, month: 5, name: "Juin 2027" }
+
+];
+
+
+const weekdays = [
+    "Lun",
+    "Mar",
+    "Mer",
+    "Jeu",
+    "Ven",
+    "Sam",
+    "Dim"
+];
+
+
+let selectedTeam = "begles1";
+
+
+/* =====================================================
+   CRÉATION DU CALENDRIER
+===================================================== */
+
+function renderCalendar(team) {
+
+    const container =
+        document.getElementById("season-calendar-grid");
+
+    const teamTitle =
+        document.getElementById("selected-team-name");
+
+
+    if (!container || !teamTitle) {
+        return;
+    }
+
+
+    teamTitle.textContent =
+        teamNames[team];
+
+
+    container.innerHTML = "";
+
+
+    seasonMonths.forEach(monthData => {
+
+        const monthElement =
+            document.createElement("div");
+
+        monthElement.className =
+            "calendar-month";
+
+
+        /* TITRE DU MOIS */
+
+        const monthTitle =
+            document.createElement("div");
+
+        monthTitle.className =
+            "calendar-month-title";
+
+        monthTitle.textContent =
+            monthData.name;
+
+        monthElement.appendChild(
+            monthTitle
+        );
+
+
+        /* JOURS DE LA SEMAINE */
+
+        const weekdaysElement =
+            document.createElement("div");
+
+        weekdaysElement.className =
+            "calendar-weekdays";
+
+
+        weekdays.forEach(day => {
+
+            const element =
+                document.createElement("span");
+
+            element.textContent =
+                day;
+
+            weekdaysElement.appendChild(
+                element
+            );
+
+        });
+
+
+        monthElement.appendChild(
+            weekdaysElement
+        );
+
+
+        /* GRILLE DU MOIS */
+
+        const daysElement =
+            document.createElement("div");
+
+        daysElement.className =
+            "calendar-days";
+
+
+        const firstDay =
+            new Date(
+                monthData.year,
+                monthData.month,
+                1
+            );
+
+
+        let startDay =
+            firstDay.getDay();
+
+
+        if (startDay === 0) {
+            startDay = 7;
+        }
+
+
+        /* CASES VIDES AVANT LE 1er */
+
+        for (
+            let i = 1;
+            i < startDay;
+            i++
+        ) {
+
+            const empty =
+                document.createElement("div");
+
+            empty.className =
+                "calendar-day empty";
+
+            daysElement.appendChild(
+                empty
+            );
+
+        }
+
+
+        /* NOMBRE DE JOURS DU MOIS */
+
+        const daysInMonth =
+            new Date(
+                monthData.year,
+                monthData.month + 1,
+                0
+            ).getDate();
+
+
+        /* CRÉATION DE CHAQUE JOUR */
+
+        for (
+            let day = 1;
+            day <= daysInMonth;
+            day++
+        ) {
+
+            const dayElement =
+                document.createElement("div");
+
+            dayElement.className =
+                "calendar-day";
+
+
+            const number =
+                document.createElement("span");
+
+            number.className =
+                "calendar-day-number";
+
+            number.textContent =
+                day;
+
+            dayElement.appendChild(
+                number
+            );
+
+
+            const monthNumber =
+                String(
+                    monthData.month + 1
+                ).padStart(2, "0");
+
+
+            const dayNumber =
+                String(day).padStart(
+                    2,
+                    "0"
+                );
+
+
+            const dateString =
+                monthData.year +
+                "-" +
+                monthNumber +
+                "-" +
+                dayNumber;
+
+
+            /* =================================================
+               RECHERCHE D'UN MATCH À CETTE DATE
+            ================================================= */
+
+            const teamMatches =
+                matches[team] || [];
+
+
+            const match =
+                teamMatches.find(item => {
+
+                    /*
+                    Si une date définitive existe,
+                    on utilise uniquement celle-ci.
+                    */
+
+                    if (item.confirmedDate) {
+
+                        return (
+                            item.confirmedDate ===
+                            dateString
+                        );
+
+                    }
+
+
+                    /*
+                    Sinon on utilise la date FFVB
+                    comme date indicative.
+                    */
+
+                    return (
+                        item.provisionalDate ===
+                        dateString
+                    );
+
+                });
+
+
+            /* =================================================
+               AFFICHAGE DU MATCH
+            ================================================= */
+
+            if (match) {
+
+                const isConfirmed =
+                    Boolean(
+                        match.confirmedDate
+                    );
+
+
+                if (isConfirmed) {
+
+                    dayElement.classList.add(
+                        "match-confirmed"
+                    );
+
+                } else {
+
+                    dayElement.classList.add(
+                        "match-provisional"
+                    );
+
+                }
+
+
+                /* ADVERSAIRE */
+
+                const opponent =
+                    document.createElement(
+                        "span"
+                    );
+
+                opponent.className =
+                    "calendar-match-name";
+
+
+                if (match.home) {
+
+                    opponent.textContent =
+                        "vs " +
+                        match.opponent;
+
+                } else {
+
+                    opponent.textContent =
+                        "@ " +
+                        match.opponent;
+
+                }
+
+
+                dayElement.appendChild(
+                    opponent
+                );
+
+
+                /* STATUT */
+
+                const status =
+                    document.createElement(
+                        "span"
+                    );
+
+                status.className =
+                    "calendar-match-status";
+
+
+                if (isConfirmed) {
+
+                    status.textContent =
+                        "Confirmé";
+
+                } else {
+
+                    status.textContent =
+                        "Indicatif";
+
+                }
+
+
+                dayElement.appendChild(
+                    status
+                );
+
+            }
+
+
+            daysElement.appendChild(
+                dayElement
+            );
+
+        }
+
+
+        monthElement.appendChild(
+            daysElement
+        );
+
+
+        container.appendChild(
+            monthElement
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   GESTION DES ONGLETS
+===================================================== */
+
+document
+    .querySelectorAll(".calendar-tab")
+    .forEach(tab => {
+
+        tab.addEventListener(
+            "click",
+            function () {
+
+                document
+                    .querySelectorAll(
+                        ".calendar-tab"
+                    )
+                    .forEach(button => {
+
+                        button.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                selectedTeam =
+                    this.dataset.team;
+
+
+                renderCalendar(
+                    selectedTeam
+                );
+
+            }
+        );
+
+    });
+
+
+/* =====================================================
+   PREMIER AFFICHAGE
+===================================================== */
+
+renderCalendar(
+    selectedTeam
+);
+    
+    </script>
+
+</body>
+    
 </html>
