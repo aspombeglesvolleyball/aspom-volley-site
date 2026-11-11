@@ -848,20 +848,26 @@ function renderCalendar(team) {
                     
                     }
 
-                if (isConfirmed) {
+                if (match.played) {
 
+                    dayElement.classList.add(
+                        "match-played"
+                    );
+                
+                } else if (isConfirmed) {
+                
                     dayElement.classList.add(
                         "match-confirmed"
                     );
-
+                
                 } else {
-
+                
                     dayElement.classList.add(
                         "match-provisional"
                     );
-
+                
                 }
-
+                
 
                 /* ADVERSAIRE */
 
@@ -923,16 +929,21 @@ function renderCalendar(team) {
                     "calendar-match-status";
 
 
-                if (isConfirmed) {
+                if (match.played) {
 
+                    status.textContent =
+                        "Joué";
+                
+                } else if (isConfirmed) {
+                
                     status.textContent =
                         "Confirmé";
-
+                
                 } else {
-
+                
                     status.textContent =
                         "Indicatif";
-
+                
                 }
 
 
