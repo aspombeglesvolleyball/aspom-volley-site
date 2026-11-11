@@ -2088,6 +2088,13 @@ nav a.nav-active {
        font-weight: bold;
    }
 
+   .partner-logo {
+       width: 180px;
+       max-width: 80%;
+       height: auto;
+       margin-bottom: 18px;
+   }
+
 /* =====================================================
    TABLETTES
 ===================================================== */
