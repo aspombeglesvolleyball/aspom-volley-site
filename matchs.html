@@ -513,9 +513,9 @@
                 {
                     opponent: "Martignas 1",
                     provisionalDate: "2026-11-11",
-                    confirmedDate: "2026-11-11",
+                    confirmedDate: null,
                     home: false,
-                    played: true
+                    played: false
                 },
             
                 {
@@ -682,12 +682,52 @@
             ],
     
         heitz: [
-    
-        ],
+
+                {
+                    opponent: "Adversaire à préciser",
+                    provisionalDate: "2026-10-27",
+                    confirmedDate: "2026-10-27",
+                    home: null,
+                    played: true
+                },
+            
+                {
+                    opponent: "Adversaire à préciser",
+                    provisionalDate: "2026-11-09",
+                    confirmedDate: "2026-11-09",
+                    home: null,
+                    played: true
+                }
+            
+            ],
     
         aicoberry: [
-    
-        ]
+
+                {
+                    opponent: "Adversaire à préciser",
+                    provisionalDate: "2026-11-25",
+                    confirmedDate: "2026-11-25",
+                    home: null,
+                    played: false
+                },
+            
+                {
+                    opponent: "Adversaire à préciser",
+                    provisionalDate: "2026-12-17",
+                    confirmedDate: "2026-12-17",
+                    home: null,
+                    played: false
+                },
+            
+                {
+                    opponent: "Adversaire à préciser",
+                    provisionalDate: "2027-01-12",
+                    confirmedDate: "2027-01-12",
+                    home: null,
+                    played: false
+                }
+            
+            ],
     
     };
 
@@ -962,19 +1002,19 @@ function renderCalendar(team) {
                         match.confirmedDate
                     );
                 
-                    if (match.home) {
-                    
-                        dayElement.classList.add(
-                            "match-home"
-                        );
-                    
-                    } else {
-                    
-                        dayElement.classList.add(
-                            "match-away"
-                        );
-                    
-                    }
+                    if (match.home === true) {
+
+                    dayElement.classList.add(
+                        "match-home"
+                    );
+                
+                } else if (match.home === false) {
+                
+                    dayElement.classList.add(
+                        "match-away"
+                    );
+                
+                }
 
                 if (match.played) {
 
@@ -1037,10 +1077,18 @@ function renderCalendar(team) {
                 locationStatus.className =
                     "calendar-match-location";
                 
-                locationStatus.textContent =
-                    match.home
-                        ? "DOM"
-                        : "EXT";
+                if (match.home === true) {
+
+                    locationStatus.textContent = "DOM";
+                
+                } else if (match.home === false) {
+                
+                    locationStatus.textContent = "EXT";
+                
+                } else {
+                
+                    locationStatus.textContent = "";
+                }
                 
                 dayElement.appendChild(
                     locationStatus
